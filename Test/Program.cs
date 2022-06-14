@@ -3,7 +3,7 @@
 
 Console.WriteLine(Print(SolveEx(CreatArray("Введите слова в массив через пробел"))));
 
-string[] creatArray(string description)
+string[] CreatArray(string description)
 {
     
     Console.WriteLine(description);
