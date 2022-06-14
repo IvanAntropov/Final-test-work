@@ -1,5 +1,5 @@
 ﻿
-string[] arr = { "asdf", "asdf", "13fdf", "adkook", "4okko", "fhgd" };
+string[] arr = { "adf", "asdf", "13fdf", "adkook", "4okko", "fhgd" };
 
 //CreatArray();
 
@@ -16,7 +16,7 @@ string[] CreatArray()
 string[] SolveEx(string[] array, int flag)
 {
 
-    string help = null;
+   string help = string.Empty;
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i].Length <= 3)
@@ -24,29 +24,19 @@ string[] SolveEx(string[] array, int flag)
             help += array[i] + " ";
         }
     }
-
-    string[] result = new string[] { };
-    if (help == null)
-    {
-        flag++;
-        return result;
-    }
-    else
-    {
-        help = help.TrimEnd(' ');
-        result = help.Split(" ");
-        return result;
-    }
+    help = help.TrimEnd(' ');
+    string[] result = help.Split(" ");
+    return result;
 }
 
 string Print(string[] array, int flag)
 {
     string forPrint = string.Empty;
     forPrint += "[";
-    if (flag == 1)
+    if (array[0] == "")
     {
         forPrint += " Array is empty ";
-
+        
     }
     else
     {
@@ -54,8 +44,9 @@ string Print(string[] array, int flag)
         {
             forPrint += array[i] + ", ";
         }
-        forPrint = forPrint.TrimEnd(',', ' ');
+        forPrint = forPrint.TrimEnd(',',' ');
     }
     forPrint += "]";
     return forPrint;
+
 }
