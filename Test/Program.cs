@@ -1,2 +1,19 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+CreatArray();
+SolveEx();
+Print();
+
+string[] CreatArray()
+{
+
+}
+
+string[] SolveEx(string[] array)
+{
+
+}
+
+string Print(string[] array)
+{
+
+}
