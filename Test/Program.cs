@@ -19,9 +19,13 @@ string[] SolveEx(string[] array)
     string help = string.Empty;
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i].Length <= 3)
+        if (array[i].Length <= 3 && i != array[i].Length - 1)
         {
             help += array[i] + " ";
+        }
+        else if (array[i].Length <= 3 && i == array[i].Length - 1)
+        {
+            help += array[i];
         }
     }
     string[] result = help.Split(" ");
@@ -32,13 +36,29 @@ string[] SolveEx(string[] array)
 string Print(string[] array)
 {
     string forPrint = string.Empty;
-    forPrint += "[";
-    
+    if (array.Length == 0)
+    {
+        return forPrint += " Array is empty ";
+    }
+    else
+    {
+        forPrint += "[";
         for (int i = 0; i < array.Length; i++)
         {
-            forPrint += array[i] + ", ";
+            if (i == array.Length - 1)
+            {
+                forPrint += array[i];
+            }
+            else
+            {
+                forPrint += array[i] + ", ";
+            }
+
         }
-    forPrint += "]";
-    return forPrint;
+        forPrint += "]";
+        return forPrint;
+
+    }
+
 
 }
