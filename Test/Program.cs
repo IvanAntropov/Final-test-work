@@ -3,21 +3,19 @@ Console.WriteLine(Print(SolveEx(CreatArray("Введите слова в мас�
 
 string[] CreatArray(string description)
 {
-    
+
     Console.WriteLine(description);
-    string help = string.Empty; 
+    string? help = string.Empty;
     help = Console.ReadLine();
     help = string.Join(" ", help.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries));
     string[] array = help.Split(" ");
     return array;
 }
 
-
-
 string[] SolveEx(string[] array)
 {
 
-   string help = string.Empty;
+    string help = string.Empty;
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i].Length <= 3)
@@ -37,7 +35,7 @@ string Print(string[] array)
     if (array[0] == "")
     {
         forPrint += " Array is empty ";
-        
+
     }
     else
     {
@@ -45,7 +43,7 @@ string Print(string[] array)
         {
             forPrint += array[i] + ", ";
         }
-        forPrint = forPrint.TrimEnd(',',' ');
+        forPrint = forPrint.TrimEnd(',', ' ');
     }
     forPrint += "]";
     return forPrint;
