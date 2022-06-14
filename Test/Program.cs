@@ -1,6 +1,4 @@
 ﻿
-//string[] arr = { "adf", "asdf", "13fdf", "adkook", "4okko", "fhgd" };
-
 Console.WriteLine(Print(SolveEx(CreatArray("Введите слова в массив через пробел"))));
 
 string[] CreatArray(string description)
@@ -9,9 +7,11 @@ string[] CreatArray(string description)
     Console.WriteLine(description);
     string help = string.Empty; 
     help = Console.ReadLine();
+    help = string.Join(" ", help.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries));
     string[] array = help.Split(" ");
     return array;
 }
+
 
 
 string[] SolveEx(string[] array)
