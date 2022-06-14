@@ -1,19 +1,20 @@
 ﻿
-string[] arr = { "adf", "asdf", "13fdf", "adkook", "4okko", "fhgd" };
+//string[] arr = { "adf", "asdf", "13fdf", "adkook", "4okko", "fhgd" };
 
-//CreatArray();
+Console.WriteLine(Print(SolveEx(CreatArray("Введите слова в массив через пробел"))));
 
-int flag = 0;
-Console.WriteLine(Print(SolveEx(arr, flag), flag));
-
-/*
-string[] CreatArray()
+string[] creatArray(string description)
 {
-
+    
+    Console.WriteLine(description);
+    string help = string.Empty; 
+    help = Console.ReadLine();
+    string[] array = help.Split(" ");
+    return array;
 }
-*/
 
-string[] SolveEx(string[] array, int flag)
+
+string[] SolveEx(string[] array)
 {
 
    string help = string.Empty;
@@ -29,7 +30,7 @@ string[] SolveEx(string[] array, int flag)
     return result;
 }
 
-string Print(string[] array, int flag)
+string Print(string[] array)
 {
     string forPrint = string.Empty;
     forPrint += "[";
