@@ -19,18 +19,14 @@ string[] SolveEx(string[] array)
     string help = string.Empty;
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i].Length <= 3 && i != array[i].Length - 1)
+        if (array[i].Length <= 3)
         {
             help += array[i] + " ";
         }
-        else if (array[i].Length <= 3 && i == array[i].Length - 1)
-        {
-            help += array[i];
-        }
     }
+    help = help.TrimEnd(' ');
     string[] result = help.Split(" ");
     return result;
-
 }
 
 string Print(string[] array)
